@@ -1,0 +1,40 @@
+#main-nav {
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  text-transform: uppercase;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#main-nav a {
+  text-decoration: none;
+  color: rgb(255, 84, 0);
+}
+
+.nav-delimiter {
+  margin: 0.4em;
+  color: rgb(255, 84, 0);
+}
+
+h1 {
+  display: block;
+  color: rgb(255, 84, 0);
+  margin-left: 5px;
+  margin-top: 1px;
+}
+h1 span{
+  margin: 0.2em;
+}
+
+.upper-nav-li {
+  display: inline;
+  order: 1;
+}
+
+.upper-nav-li a {}
+
+.lower-nav-li {
+  display: inline;
+  order:2;
+}
