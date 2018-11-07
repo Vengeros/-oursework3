@@ -1,0 +1,71 @@
+#main-nav {
+  background-color:rgb(0, 0, 0);
+  text-transform: uppercase;
+  height: 7vh;
+  grid-area: "nav";
+  display: grid;
+  grid-template-areas:
+    "h1 top top"
+    "h1 free search"
+    "h1 bot search";
+  grid-template-columns: 30% 1fr 30%;
+  grid-template-rows: 30px 30px 30px;
+  grid-gap: 0;
+}
+
+#main-nav .logo {
+  color: rgb(255, 84, 0);
+  grid-area: "h1";
+  /* background-color: rgb(26, 28, 207); */
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  text-align: center;
+  text-align: center;
+}
+
+#main-nav .logo .in {
+  text-align: center;
+  margin-top: 0.7vh;
+  -webkit-transform: scale(1, 1.2);
+  -moz-transform: scale(1, 1.2);
+  /* Firefox */
+  -ms-transform: scale(1, 1.2);
+  /* IE 9 */
+  -o-transform: scale(1, 1.2);
+  /* Opera */
+  font-size: 2em;
+  font-weight: 600;
+  text-align: inherit;
+}
+
+.logo span {
+  margin: 0.6em;
+}
+
+#main-nav .top-links {
+  grid-area: "top-links";
+  /* background-color: rgb(234, 14, 246); */
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  text-align: right;
+}
+
+#main-nav .bot-links {
+  /* background-color: rgb(221, 198, 31); */
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+#main-nav a{
+  color: rgb(255, 84, 0);
+  text-decoration: none;
+}
+#main-nav .delimiter{
+  color: rgb(255, 84, 0);
+  margin: 1em;
+}
