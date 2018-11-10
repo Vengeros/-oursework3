@@ -4,6 +4,14 @@
   flex-direction: row;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 107, 0);
+  max-height: 60px;
+  min-height: 60px;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  /* position: sticky; */
+  top: 0;
+  right: 0;
 }
 
 #main-nav .links {
@@ -19,15 +27,16 @@
   max-width: 200px;
   align-items: center;
   justify-content: center;
+  margin-left: 15px;
 }
 
 #main-nav .logo .in {
   font-size: 30px;
   font-weight: 900;
-  transform: scale(1,1.2 );
-
+  transform: scale(1, 1.2);
 }
-#main-nav .logo .in span{
+
+#main-nav .logo .in span {
   margin: 0 7px;
 }
 
@@ -41,7 +50,7 @@
   font-size: 18px;
   font-weight: 600;
   /* margin-right: 20px; */
-  background: linear-gradient(175deg, rgb(0, 0, 0),rgba(116, 116, 116, 0.25));
+  background: linear-gradient(175deg, rgb(0, 0, 0), rgba(116, 116, 116, 0.25));
 }
 
 #main-nav .bot-links {
@@ -68,9 +77,11 @@
 }
 
 #log-in {
-  margin-left: 20px;
+  margin-left: 30px;
 }
-#main-nav i{
-  padding-left:  5px;
+
+#logo-icon {
+  display: inline;
+  padding-left: 5px;
   padding-right: 8px;
 }
