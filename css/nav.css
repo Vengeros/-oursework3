@@ -50,7 +50,7 @@
   font-size: 18px;
   font-weight: 600;
   /* margin-right: 20px; */
-  background: linear-gradient(175deg, rgb(0, 0, 0), rgba(116, 116, 116, 0.25));
+  background: linear-gradient(175deg, rgb(0, 0, 0), rgba(116, 116, 116, 0.45));
 }
 
 #main-nav .bot-links {
@@ -84,4 +84,22 @@
   display: inline;
   padding-left: 5px;
   padding-right: 8px;
+}
+
+.hiden-part {
+  display: none;
+  position: absolute;
+  background-color: rgb(179, 41, 77);
+  left: 0;
+  width: 100vw;
+  height: 300px;
+}
+
+.section:hover {
+  background-color: #c4c4c4;
+}
+
+.section:hover .hiden-part {
+  background-color: inherit;
+  display: block;
 }
