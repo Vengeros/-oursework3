@@ -1,5 +1,12 @@
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
+    const canvasElements = document.getElementsByClassName('bubbles')
 
+    for (let i = 0; i < canvasElements.length; i++) {
+        initCanvas(canvasElements[i])
+    }
+})
+
+function initCanvas(canvas) {
     var width, height, canvas, ctx, circles, target, animateHeader = true;
 
     // Main
@@ -11,9 +18,8 @@
         height = window.innerHeight;
         target = {x: 0, y: height};
 
-
-
-        canvas = document.getElementById('bubbles');
+        // canvas.width = 100;
+        // canvas.height = 60;
         canvas.width = width;
         canvas.height = height;
         ctx = canvas.getContext('2d');
@@ -87,4 +93,4 @@
         };
     }
 
-})();
+}
