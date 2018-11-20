@@ -50,7 +50,7 @@
   font-size: 18px;
   font-weight: 600;
   /* margin-right: 20px; */
-  background: linear-gradient(175deg, rgb(0, 0, 0), rgba(116, 116, 116, 0.45));
+  background: linear-gradient(175deg, rgb(0, 0, 0), rgba(116, 116, 116, 0.55));
 }
 
 #main-nav .bot-links {
@@ -86,6 +86,10 @@
   padding-right: 8px;
 }
 
+#main-nav a:hover {
+  color: rgb(255, 255, 255);
+}
+
 .hiden-part {
   display: none;
   position: absolute;
@@ -96,10 +100,36 @@
 }
 
 .section:hover {
-  background-color: #c4c4c4;
+  /* background-color: #c4c4c4; */
 }
 
 .section:hover .hiden-part {
   background-color: inherit;
   display: block;
+}
+
+.hiden-part .ul-container {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content:  flex-start;
+}
+.hiden-part .ul-container section{
+  display: flex;
+  flex-direction: column;
+  /* align-content: flex-start; */
+}
+.hiden-part .ul-container h2{
+  /* display: flex;
+  flex-direction: column; */
+  margin-bottom: -10px;
+  align-self: center;
+}
+.hiden-part .ul-container ul{
+  /* align-self: flex-start; */
+  margin: 20px 30px;
+}
+.hiden-part .ul-container li{
+list-style-type: none;
+margin: 10px 0;
 }

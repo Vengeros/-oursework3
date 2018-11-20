@@ -4,7 +4,7 @@ body{
     "nav"
     "div"
     "footer";
-    grid-template-rows: 60px 1fr 10%;
+    grid-template-rows: 60px 1fr 150px;
     grid-gap: 0px;
     height: 100vh;
     margin: 0;
@@ -14,13 +14,14 @@ body{
 .bubbles {
 background:#3dd924;
 width:100%;
-height: 100%;
+height: 150%;
 -webkit-transition: all 0.4s ease-in-out;
 -moz-transition: all 0.4s ease-in-out;
 -ms-transition: all 0.4s ease-in-out;
 -o-transition: all 0.4s ease-in-out;
 transition: all 0.4s ease-in-out;
+position: absolute;
 }
 .bubbles:hover {
-background:#3dd924;
+background:rgb(0, 29, 255);
 }
