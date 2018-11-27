@@ -42,16 +42,16 @@ class Circle {
 		this.x += this.dx;
 		this.y += this.dy;
 
-		this.grow(mouse.x, mouse.y);
+		this.grow(mouse.x+15, mouse.y-50);
 		this.draw();
 	}
 
 	grow(x, y) {
 		if (
-			x - this.x < 60 &&
-			x - this.x > -60 &&
-			y - this.y < 60 &&
-			y - this.y > -60
+			x - this.x < 20 &&
+			x - this.x > -20 &&
+			y - this.y < 20 &&
+			y - this.y > -20
 		) {
 			if (this.radius < this.maxRadius) {
 				this.radius += 1;
