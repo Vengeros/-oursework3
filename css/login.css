@@ -1,0 +1,17 @@
+.transparent-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(131, 10, 136, 0.40);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+
+/* #log-in:hover .transparent-background{
+  display: block;
+  cursor: crosshair;
+}
+#log-in{
+    cursor: crosshair;
+} */
