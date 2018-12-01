@@ -1,7 +1,7 @@
 .transparent-background {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(131, 10, 136, 0.40);
+  background-color:rgba(255, 250, 15, 0.55);
   position: absolute;
   top: 0;
   bottom: 0;
