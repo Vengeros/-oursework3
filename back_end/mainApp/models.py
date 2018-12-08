@@ -112,26 +112,27 @@ class DjangoSession(models.Model):
 
 
 class Clients(models.Model):
-    idclient = models.AutoField(db_column='idClient', primary_key=True)  # Field name made lowercase.
+    idclient = models.AutoField(db_column='idClient', primary_key=True,unique=True)  # Field name made lowercase.
     name = models.CharField(db_column='Name', max_length=45,validators=[validate_slug])  # Field name made lowercase.
-    phone = models.DecimalField(db_column='Phone', max_digits=9, decimal_places=0,validators=[MinLengthValidator(9)])  # Field name made lowercase.
-    surname = models.CharField(db_column='Surname', max_length=45)  # Field name made lowercase.
-    age = models.IntegerField(db_column='Age', blank=True, null=True)  # Field name made lowercase.
-    email = models.CharField(db_column='Email', max_length=45)  # Field name made lowercase.
-    password = models.CharField(db_column='Password', max_length=100)  # Field name made lowercase.
-    creditcard = models.DecimalField(db_column='CreditCard', max_digits=16, decimal_places=0)  # Field name made lowercase.
-    creationdate = models.DateTimeField(db_column='CreationDate')  # Field name made lowercase.
+    phone = models.DecimalField(db_column='Phone', max_digits=9, decimal_places=0,validators=[MinLengthValidator(9)],unique=True)  # Field name made lowercase.
+    surname = models.CharField(db_column='Surname', max_length=45,validators=[validate_slug])  # Field name made lowercase.
+    age = models.IntegerField(db_column='Age', blank=True, null=True,validators=[MinValueValidator(1),MaxValueValidator(100)])  # Field name made lowercase.
+    email = models.CharField(db_column='Email', max_length=45,validators=[validate_email],unique=True)  # Field name made lowercase.
+    password = models.CharField(db_column='Password', max_length=100,validators=[validate_slug])  # Field name made lowercase.
+    creditcard = models.DecimalField(db_column='CreditCard', max_digits=16, decimal_places=0,validators=[MinLengthValidator(14),MaxLengthValidator(16)],unique=True)  # Field name made lowercase.
+    creationdate = models.DateTimeField(db_column='CreationDate',auto_now=True)  # Field name made lowercase.
 
     class Meta:
         managed = False
         db_table = 'clients'
+        ordering = ["name","surname"]
 
 
 class Firms(models.Model):
     idfirms = models.AutoField(db_column='idFirms', primary_key=True)  # Field name made lowercase.
-    name = models.CharField(db_column='Name', max_length=45, blank=True, null=True)  # Field name made lowercase.
-    contactnumber = models.DecimalField(db_column='ContactNumber', unique=True, max_digits=9, decimal_places=0, blank=True, null=True)  # Field name made lowercase.
-    email = models.CharField(db_column='Email', unique=True, max_length=45, blank=True, null=True)  # Field name made lowercase.
+    name = models.CharField(db_column='Name', max_length=45, blank=True, null=True,validators=[validate_slug],unique=True)  # Field name made lowercase.
+    contactnumber = models.CharField(db_column='ContactNumber', unique=True, max_length=9, blank=True, null=True,validators=[validate_slug,MinLengthValidator(9)])  # Field name made lowercase.
+    email = models.CharField(db_column='Email', unique=True, max_length=45, blank=True, null=True,validators=[validate_email])  # Field name made lowercase.
 
     class Meta:
         managed = False
@@ -140,7 +141,7 @@ class Firms(models.Model):
 
 class Goods(models.Model):
     idgood = models.AutoField(db_column='idGood', primary_key=True)  # Field name made lowercase.
-    uniquecode = models.CharField(db_column='Uniquecode', max_length=10)  # Field name made lowercase.
+    uniquecode = models.CharField(db_column='Uniquecode', max_length=10,)  # Field name made lowercase.
     article = models.CharField(db_column='Article', max_length=45, blank=True, null=True)  # Field name made lowercase.
     name = models.CharField(db_column='Name', max_length=45, blank=True, null=True)  # Field name made lowercase.
     size = models.CharField(db_column='Size', max_length=15, blank=True, null=True)  # Field name made lowercase.
@@ -148,11 +149,17 @@ class Goods(models.Model):
     price = models.CharField(db_column='Price', max_length=10, blank=True, null=True)  # Field name made lowercase.
     image = models.TextField(db_column='Image', blank=True, null=True)  # Field name made lowercase.
     goodtypeid = models.ForeignKey('Goodstype', models.DO_NOTHING, db_column='GoodTypeID', blank=True, null=True)  # Field name made lowercase.
-    firmid = models.ForeignKey(Firms, models.DO_NOTHING, db_column='FirmID', blank=True, null=True)  # Field name made lowercase.
+    firmid = models.ForeignKey('Firms', models.DO_NOTHING, db_column='FirmID', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        # managed = False
         db_table = 'goods'
+        ordering = ["name"]
+    def __unicode__(self):
+        return self.uniquecode
+    # def sort1(self):
+    #     for i in self:
+    #         print(i.uniquecode)
 
 
 class Goodstype(models.Model):
@@ -187,8 +194,9 @@ class Orderslist(models.Model):
 
 class Test(models.Model):
     idtest = models.AutoField(primary_key=True)
-    testcol = models.DecimalField(max_digits=10, decimal_places=0, blank=True, null=True)
-    testcol1 = models.CharField(max_length=45, blank=True, null=True)
+    testcol = models.DecimalField(max_digits=10, decimal_places=0, blank=True, null=True,validators=[MinValueValidator(1),MaxValueValidator(100)])
+    testcol1 = models.CharField(max_length=45, blank=True, null=True,validators=[validate_slug])
+    creditcard = models.CharField(max_length=45, blank=True, null=True,db_column='CreditCard',validators=[MinLengthValidator(14),MaxLengthValidator(16)])  # Field name made lowercase.
 
     class Meta:
         managed = False
