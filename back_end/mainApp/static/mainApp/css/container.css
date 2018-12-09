@@ -1,6 +1,8 @@
 #main-container {
-  height: 100vh;
+  grid-area: "div";
+  /* height: 100vh; */
   /* background-color: rgb(255, 57, 0); */
+  min-height: 100vh;
 }
 
 .anime {

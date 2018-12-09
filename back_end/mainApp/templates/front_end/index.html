@@ -18,9 +18,8 @@
 
 
 <body>
-  <!-- <canvas class="anime"></canvas>
-  <script src="{% static 'mainApp/js/BackCircles.js'%}"></script> -->
 
+<div class="body">
   <div class="nav-container">
     <nav id="main-nav">
       {% include "front_end\includes\nav_content.html"%}
@@ -28,12 +27,18 @@
   </div>
   <div id="main-container">
 {% include "front_end\includes\help.html"%}
+{% for i in goods %}
+<div>  {{i.name}}</div>
+{% endfor %}
+<!-- <canvas class="anime"></canvas>
+<script src="{% static 'mainApp/js/BackCircles.js'%}" async></script> -->
+
 
   </div>
   <footer id="main-footer">
     {% include "front_end\includes\footer.html"%}
   </footer>
-
+</div>
 </body>
 
 
