@@ -1,8 +1,13 @@
 #main-container {
-  grid-area: "div";
-  /* height: 100vh; */
-  /* background-color: rgb(255, 57, 0); */
+  display: grid;
+  grid-area:
+    "carusel"
+    "div";
   min-height: 100vh;
+}
+
+.mycarusel {
+  grid-area: "carusel";
 }
 
 .anime {
@@ -12,7 +17,90 @@
   height: 100vh;
   display: block;
   position: absolute;
-  top:60px;
-  background-repeat: repeat-y;
-  z-index: 0;
+  top: 60px;
+  z-index: -1;
+}
+
+.content-wraper {
+  display: grid;
+  margin: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.30);
+  box-shadow: inset 0 0 40px 10px #faff00;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  justify-items: center;
+}
+
+.content {
+  box-sizing: border-box;
+  padding: 5px;
+  display: grid;
+  /* grid-template-rows:1fr 1fr; */
+  grid-template-areas:
+    "img img img"
+    "img img img"
+    "img img img"
+    "img img img"
+    "name name name"
+    "type type type"
+    "article article size"
+    "firm firm price"
+    "counter counter counter";
+  grid-gap: 2px;
+  /* background: url(http://zabavnik.club/wp-content/uploads/2018/01/anime_kartinki_1_24202903.png); */
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  box-shadow: inset 0 0 6px 2px;
+  border-radius: 10px;
+  width: 250px;
+  /* max-height: 400px; */
+  height: 350px;
+  align-items: center;
+  justify-items: center;
+}
+.text-what-i-need{
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+  max-width: 230px;
+}
+.content .img {
+  width: 100px;
+  height: 200px;
+  grid-area: img;
+}
+
+.content .name {
+  max-width: 230px;
+  grid-area: name;
+  font-weight:900;
+}
+
+.content .article {
+  grid-area: article;
+  justify-self: start;
+}
+
+.content .size {
+  grid-area: size;
+}
+
+.content .price {
+  grid-area: price;
+}
+
+.content .type {
+  grid-area: type;
+}
+
+.content .firm {
+  grid-area: firm;
+  justify-self: start;
+}
+
+.content .counter {
+  grid-area: counter;
 }

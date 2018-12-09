@@ -1,0 +1,16 @@
+<!-- {% include "front_end\includes\slider.html"%} -->
+<div class="content-wraper">
+  {% load staticfiles %}
+  {% for i in goods %}
+  <div class="content">
+    <img class="img" src="{% static 'mainApp/images/img.jpg'%}" alt="XXX">
+  <div class="name text-what-i-need">{{i.name}}</div>
+  <div class="article">Article:{{i.article}}</div>
+  <div class="size">Size:{{i.size}}{% if i.size == '' %}undefine{% endif %}</div>
+  <div class="price">Price:{{i.price}}</div>
+  <div class="type text-what-i-need">{{i.goodtypeid.type}}</div>
+  <div class="firm">Firm:{{i.firmid.name}}</div>
+  <div class="counter">COUNT TO DO</div>
+  </div>
+  {% endfor %}
+</div>

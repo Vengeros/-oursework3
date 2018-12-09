@@ -5,86 +5,40 @@
   <div class="top-links">
     <a href="{{help}}">help</a>
     <span class="delimiter">|</span>
-    <a href="" >orders</a>
+    <a href="">orders</a>
     <!-- <span class="delimiter">|</span> -->
     {% include "front_end\includes\login_form.html"%}
   </div>
 
   <div class="bot-links">
     <section class="section">
-      <a href="">product type</a>
+      <a href="">products type</a>
       <div class="hiden-part">
         <canvas class="bubbles"></canvas>
         <div class="ul-container">
-          <section>
-            <h2>Title</h2>
-            <ul>
-              <li>section.0.0</li>
-              <li>section.0.1</li>
-              <li>section.0.2</li>
-              <li>section.0.3</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Title</h2>
-            <ul>
-              <li>section.0.0</li>
-              <li>section.0.1</li>
-              <li>section.0.2</li>
-              <li>section.0.3</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Title</h2>
-            <ul>
-              <li>section.0.0</li>
-              <li>section.0.1</li>
-              <li>section.0.2</li>
-              <li>section.0.3</li>
-            </ul>
-          </section>
+          {% for i in products_type %}
+          <a href="?type={{i.idgoodstype}}">{{i.type}}</a>
+          {% endfor %}
         </div>
 
       </div>
+      <span class="delimiter">|</span>
     </section>
-    <span class="delimiter">|</span>
+
     <section class="section">
       <a href="">firms</a>
       <div class="hiden-part">
         <canvas class="bubbles"></canvas>
         <div class="ul-container">
-          <section>
-            <h2>Title</h2>
-            <ul>
-              <li>section.0.0</li>
-              <li>section.0.1</li>
-              <li>section.0.2</li>
-              <li>section.0.3</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Title</h2>
-            <ul>
-              <li>section.0.0</li>
-              <li>section.0.1</li>
-              <li>section.0.2</li>
-              <li>section.0.3</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Title</h2>
-            <ul>
-              <li>section.0.0</li>
-              <li>section.0.1</li>
-              <li>section.0.2</li>
-              <li>section.0.3</li>
-            </ul>
-          </section>
+          {% for i in firms_name %}
+          <a href="?firm={{i.idfirms}}">{{i.name}}</a>
+          {% endfor %}
         </div>
 
       </div>
+      <span class="delimiter">|</span>
     </section>
-    <span class="delimiter">|</span>
+
     <section class="section">
       <a href="">filter</a>
       <div class="hiden-part">
