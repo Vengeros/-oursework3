@@ -5,12 +5,12 @@
   <div class="content">
     <img class="img" src="{% static 'mainApp/images/img.jpg'%}" alt="XXX">
   <div class="name text-what-i-need">{{i.name}}</div>
-  <div class="article">Article:{{i.article}}</div>
+  <div class="article text-what-i-need">Article:{{i.article}}</div>
   <div class="size">Size:{{i.size}}{% if i.size == '' %}undefine{% endif %}</div>
   <div class="price">Price:{{i.price}}</div>
   <div class="type text-what-i-need">{{i.goodtypeid.type}}</div>
   <div class="firm">Firm:{{i.firmid.name}}</div>
-  <div class="counter">COUNT TO DO</div>
+  <div class="counter"><button type="button" class="btn btn-success">Add to cart</button></div>
   </div>
   {% endfor %}
 </div>

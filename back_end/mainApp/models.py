@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import *
+from django.contrib.auth.models import User, UserManager
 
 class AuthGroup(models.Model):
     name = models.CharField(unique=True, max_length=80)

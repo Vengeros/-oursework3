@@ -1,11 +1,10 @@
+{% if user.is_authenticated %}
+<div id="profile">{{ user.username }}</div>
+{% else %}
 <div id="log-in" href="/reristration">
-  {% if user.is_authenticated %}
-  {{ user.username }}
-  {% else %}
   log in <i id="logo-icon" class="far fa-user"></i>
-  {% endif %}
 </div>
-
+{% endif %}
 <div class="transparent-background">
   <div class="transparent-area"></div>
   <form action="" class="registration" method="POST">
