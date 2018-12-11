@@ -10,15 +10,13 @@ def index(request):
     firm_name_id = request.GET.get("firm","")
     goods = Goods.objects.values('uniquecode').distinct()
 
-    if good_type_id is "":
+    if good_type_id is "" and firm_name_id is "":
         goods = Goods.objects.select_related('firmid','goodtypeid')[0:limit]
-    else:
+    elif good_type_id is not "":
         goods = Goods.objects.select_related('firmid','goodtypeid').filter(goodtypeid=good_type_id)#[0:limit]#better than all()
-
-    if firm_name_id is "":
-        goods = Goods.objects.select_related('firmid','goodtypeid')[0:limit]
-    else:
+    elif firm_name_id is not "":
         goods = Goods.objects.select_related('firmid','goodtypeid').filter(firmid=firm_name_id)#[0:limit]#better than all()
+
     products_type = Goodstype.objects.all()
     firms_name = Firms.objects.all()
     return render(request,'front_end/index.html',{'firms_name':firms_name,'products_type':products_type,'goods':goods,'help':'help/'})
