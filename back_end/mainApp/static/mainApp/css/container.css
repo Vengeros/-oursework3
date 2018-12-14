@@ -4,6 +4,7 @@
     "carusel"
     "div";
   min-height: 100vh;
+  background-color: rgb(28, 28, 28);
 }
 
 .mycarusel {
@@ -18,7 +19,7 @@
   display: block;
   position: absolute;
   top: 60px;
-  z-index: -1;
+  z-index: 0;
 }
 
 .content-wraper {
@@ -32,6 +33,7 @@
   grid-gap: 30px;
   justify-items: center;
 }
+
 
 .content {
   box-sizing: border-box;
@@ -51,7 +53,7 @@
   grid-gap: 2px;
   /* background: url(http://zabavnik.club/wp-content/uploads/2018/01/anime_kartinki_1_24202903.png); */
   background-size: cover;
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgb(0, 0, 0), rgb(5, 255, 0));;
   border: 1px solid black;
   box-shadow: inset 0 0 6px 2px;
   border-radius: 10px;

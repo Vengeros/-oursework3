@@ -4,8 +4,10 @@
 <div class=links>
   <div class="top-links">
     <a href="{{help}}">help</a>
+    {% if user.is_authenticated %}
     <span class="delimiter">|</span>
     <a href="">orders</a>
+    {% endif %}
     <!-- <span class="delimiter">|</span> -->
     {% include "front_end\includes\login_form.html"%}
   </div>
@@ -46,6 +48,7 @@
           <canvas class="bubbles"></canvas>
           <div class="ul-container">
             <form action="" method="get">
+              {% csrf_token %}
               <div class="form-group">
                 <!-- <label for="formGroupExampleInput">Surname</label> -->
                 <input type="text" class="form-control" name='good_name_by_regular' placeholder="Search">
