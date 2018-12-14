@@ -8,8 +8,12 @@ from django.contrib import auth
 
 def index(request):
     # global user
-    request.session["how_much_can_see"] = 14
-    limit= request.session["how_much_can_see"]
+    # if not request.session["how_much_can_see"]:
+    #     request.session["how_much_can_see"] = 14
+    # else:
+    #     request.session["how_much_can_see"] = 0
+
+    limit= int(request.POST.get("how_much_can_see", '12'))
     good_type_id = request.GET.get("type","")
     firm_name_id = request.GET.get("firm","")
     is_filter = request.GET.get("is_filter","")

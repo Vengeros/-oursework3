@@ -13,7 +13,9 @@
   <div class="counter"><button type="button" class="btn btn-success">Add to cart</button></div>
   </div>
   {% endfor %}
-  <form metod="get" action="" class="adding-button">
-
+  <form action="" method="post" class="load_more">
+    {% csrf_token %}
+    <button type="submit" name='how_much_can_see' value='100' class="btn btn-primary">Submit</button>
   </form>
+
 </div>
