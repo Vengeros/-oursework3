@@ -27,7 +27,7 @@ def index(request):
         goods = my_site_filter(request)
     products_type = Goodstype.objects.all()
     firms_name = Firms.objects.all()
-    if my_login is not "" :
+    if my_login is not "":
         try:
             User.objects.create_user(
             username = request.POST.get('my_login_nik',''),
