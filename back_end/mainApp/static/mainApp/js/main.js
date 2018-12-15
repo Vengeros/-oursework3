@@ -97,7 +97,7 @@ function initCanvas(canvas) {
 function proverka(input)
 {
     var value = input.value;
-    var rep = /[';','(',')','@','%']/;
+    var rep = /[';','(',')','%']/;
     if (rep.test(value))
     {value = value.replace(rep, ''); input.value = value;}
 }
