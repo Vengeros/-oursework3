@@ -75,7 +75,7 @@
   color:rgb(255, 0, 0);
 }
 .content .img {
-  width: 130px;
+  width: 140px;
   height: 200px;
   grid-area: img;
 }
