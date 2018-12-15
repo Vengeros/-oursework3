@@ -11,28 +11,28 @@
     {% csrf_token %}
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" name='my_login_email' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+      <input onkeyup="return proverka(this);" type="email" name='my_login_email' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
       <small id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
       <label for="formGroupExampleInput">Nik Name</label>
-      <input type="text" name='my_login_nik' class="form-control" id="formGroupExampleInput" placeholder="Your Nik Name" required>
+      <input onkeyup="return proverka(this);" type="text" name='my_login_nik' class="form-control" id="formGroupExampleInput" placeholder="Your Nik Name" required>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" name='my_login_password' class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+      <input onkeyup="return proverka(this);" type="password" name='my_login_password' class="form-control" id="exampleInputPassword1" placeholder="Password" required>
     </div>
     <div class="form-group">
       <label for="formGroupExampleInput">Name</label>
-      <input type="text" name='my_login_name' class="form-control" id="formGroupExampleInput" placeholder="Your Name" required>
+      <input onkeyup="return proverka(this);" type="text" name='my_login_name' class="form-control" id="formGroupExampleInput" placeholder="Your Name" required>
     </div>
     <div class="form-group">
       <label for="formGroupExampleInput">Surname</label>
-      <input type="text" name='my_login_surname' class="form-control" id="formGroupExampleInput" placeholder="Your Surname" required>
+      <input onkeyup="return proverka(this);" type="text" name='my_login_surname' class="form-control" id="formGroupExampleInput" placeholder="Your Surname" required>
     </div>
     <div class="form-group">
       <label for="formGroupExampleInput">Age</label>
-      <input type="text" name='my_login_age' class="form-control" id="formGroupExampleInput" placeholder="Your Age">
+      <input onkeyup="return proverka(this);" type="text" name='my_login_age' class="form-control" id="formGroupExampleInput" placeholder="Your Age">
     </div>
     <!-- <div class="form-group">
       <label for="formGroupExampleInput">Credit card</label>

@@ -51,7 +51,7 @@
               {% csrf_token %}
               <div class="form-group">
                 <!-- <label for="formGroupExampleInput">Surname</label> -->
-                <input type="text" class="form-control" name='good_name_by_regular' placeholder="Search">
+                <input onkeyup="return proverka(this);" type="text" class="form-control" name='good_name_by_regular' placeholder="Search">
                 <button type="submit" name='is_filter' value="filter" class="btn btn-primary">Submit</button>
               </div>
             </form>
