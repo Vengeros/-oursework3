@@ -155,7 +155,7 @@ class Goods(models.Model):
     class Meta:
         # managed = False
         db_table = 'goods'
-        ordering = ["name"]
+        ordering = ["-name"]
     def __unicode__(self):
         return self.uniquecode
     # def sort1(self):
