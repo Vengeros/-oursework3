@@ -3,7 +3,7 @@
   {% load staticfiles %}
   {% for i in goods %}
   <div class="content">
-    <img class="img" src="{% static 'mainApp/images/img.jpg'%}" alt="XXX">
+    <img class="img" src="{% static 'mainApp/images/pikachu.jpeg'%}" alt="XXX">
   <div class="name text-what-i-need">{{i.name}}</div>
   <div class="article text-what-i-need">Article:{{i.article}}</div>
   <div class="size">Size:{{i.size}}{% if i.size == '' %}undefine{% endif %}</div>

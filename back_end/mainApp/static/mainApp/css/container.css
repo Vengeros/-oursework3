@@ -72,10 +72,10 @@
 .text-what-i-need:hover{
   /* white-space:normal; */
   overflow:visible;
-  color:rgb(255, 0, 0);  
+  color:rgb(255, 0, 0);
 }
 .content .img {
-  width: 100px;
+  width: 130px;
   height: 200px;
   grid-area: img;
 }
