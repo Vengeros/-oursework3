@@ -6,6 +6,7 @@
 @import "nav.css" all;
 @import "bootstrap.min.css" all;
 @import "body.css" all;
+@import "media_telephone.css" all;
 .ll {
   width: 200px;
   height: 300px;

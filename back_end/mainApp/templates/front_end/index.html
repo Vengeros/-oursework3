@@ -14,29 +14,30 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script type="text/javascript" src="{% static 'mainApp/js/main.js'%}"></script>
   <script type="text/javascript" src="{% static 'mainApp/js/login.js'%}"></script>
+  <script type="text/javascript" src="{% static 'mainApp/js/media_telephone.js'%}"></script>
   <script type="text/javascript" src="{% static 'mainApp/js/bootstrap.min.js'%}"></script>
 </head>
 
 
 <body>
 
-<div class="body">
-  <div class="nav-container">
-    <nav id="main-nav">
-      {% include "front_end/includes/nav_content.html"%}
-    </nav>
-  </div>
-  <div id="main-container">
-{% include "front_end/includes/help.html"%}
-{% include "front_end/includes/goods_content.html"%}
-<!-- <canvas class="anime"></canvas>
+  <div class="body">
+    <div class="nav-container">
+      <nav id="main-nav">
+        {% include "front_end/includes/nav_content.html"%}
+      </nav>
+    </div>
+    <div id="main-container">
+      {% include "front_end/includes/help.html"%}
+      {% include "front_end/includes/goods_content.html"%}
+      <!-- <canvas class="anime"></canvas>
 <script src="{% static 'mainApp/js/BackCircles.js'%}" async></script> -->
 
+    </div>
+    <footer id="main-footer">
+      {% include "front_end/includes/footer.html"%}
+    </footer>
   </div>
-  <footer id="main-footer">
-    {% include "front_end/includes/footer.html"%}
-  </footer>
-</div>
 </body>
 
 
