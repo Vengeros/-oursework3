@@ -97,7 +97,7 @@
 .hiden-part {
   display: none;
   position: absolute;
-  background-color: rgb(179, 41, 77);
+  background-color: rgb(179, 41, 77,0);
   left: 0;
   width: 100vw;
   height: 300px;

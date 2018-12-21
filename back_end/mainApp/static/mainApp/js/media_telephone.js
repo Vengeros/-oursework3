@@ -21,6 +21,7 @@ $(document).ready(function() {
   })
 
   $('.section').on('click',function(){
+    $
     $('.hiden-part').toggle()
   })
 
