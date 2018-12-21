@@ -9,7 +9,7 @@ $(document).ready(function() {
     }
   });
 
-  $(window).on('resize', function(e) {
+  $(window).on('load', function(e) {
     width = $(window).width();
     if(width < 625) {
       $('a.logo').attr('href', '#');
