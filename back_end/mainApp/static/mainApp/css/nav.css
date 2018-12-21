@@ -32,7 +32,17 @@
   justify-content: center;
   margin-left: 15px;
 }
+#main-nav .logo::after{
+  content: "⚔️";
+  font-size: 30px;
+  transform: scale(1, 1.2);
+}
 
+#main-nav .logo::before{
+  content: "⚔️";
+  font-size: 30px;
+  transform: scale(1, 1.2);
+}
 #main-nav .logo .in {
   font-size: 30px;
   font-weight: 900;
