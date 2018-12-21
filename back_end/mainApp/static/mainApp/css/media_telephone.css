@@ -44,6 +44,10 @@
       /* margin: 0 5px; */
   }
   .section:hover .hiden-part{
-    display: none;
+    /* display: none; */
+  }
+  .hiden-part .ul-container{
+    grid-template-columns: 1fr;
+    background-color: rgb(98, 214, 245);
   }
 }
