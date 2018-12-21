@@ -9,7 +9,7 @@ $(document).ready(function() {
     }
   });
 
-  $(window).on('load', function(e) {
+  $(window).on('load resize', function(e) {
     width = $(window).width();
     if(width < 625) {
       $('a.logo').attr('href', '#');
@@ -18,6 +18,10 @@ $(document).ready(function() {
       $('a.logo').attr('href', '/');
       $('.links').toggleClass('flex');
     }
+  })
+
+  $('.section').on('click',function(){
+    $('.hiden-part').toggle()
   })
 
 });
