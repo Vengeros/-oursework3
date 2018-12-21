@@ -17,7 +17,7 @@
     <section class="section">
       <a href="#">products type</a>
       <div class="hiden-part">
-        <canvas class="bubbles"></canvas>
+        <!-- <canvas class="bubbles"></canvas> -->
         <div class="ul-container">
           {% for i in products_type %}
           <a href="?type={{i.idgoodstype}}">{{i.type}}</a>
@@ -31,7 +31,7 @@
     <section class="section">
       <a href="#">firms</a>
       <div class="hiden-part">
-        <canvas class="bubbles"></canvas>
+        <!-- <canvas class="bubbles"></canvas> -->
         <div class="ul-container">
           {% for i in firms_name %}
           <a href="?firm={{i.idfirms}}">{{i.name}}</a>
@@ -46,7 +46,7 @@
       <a href="#">filter</a>
       <div class="hiden-part">
         <div class="hiden-part">
-          <canvas class="bubbles"></canvas>
+          <!-- <canvas class="bubbles"></canvas> -->
           <div class="ul-container">
             <form action="" method="get">
               {% csrf_token %}
